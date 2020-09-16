@@ -1,0 +1,106 @@
+body, ul, li, p {
+  margin: 0px;
+  padding: 0px;
+  font-size: 1.2rem;
+  font-family: Roboto;
+  font-weight: bold;
+  list-style: none; 
+  color: #fff;
+}
+
+
+body {
+  margin-bottom: 100px;
+  background-color: #292b2f;
+}
+
+::-webkit-scrollbar{
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgb(32,34,37);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: #2f3136;
+}
+
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 100px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.header {
+  background: #1d1e20;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  border-radius: rgba(0, 0, 0, 0,2);
+  z-index: 1;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li{
+  margin-left: 10px;
+}
+
+.menu li a{
+  padding: 10px;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-gap: 20px;
+  padding: 25px;
+}
+
+.grid1 > div:nth-child(n + 4){
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  align-items: center;
+}
+
+.grid1 > div.anuncio {
+  grid-column: 1;
+  grid-row: 2 / 5;
+  border-top: 10px solid #413f3f;
+  display: block;
+}
+
+@media (max-width: 900px){
+  .grid1 {
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+  }
+  .grid1 > div:nth-child(n + 4){
+    display: block;
+  }
+  .grid1 > div.anuncio {
+    grid-row: auto;
+    grid-column: auto;
+
+    order: -1;
+  }
+}
